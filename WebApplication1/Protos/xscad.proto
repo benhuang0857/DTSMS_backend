@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+
+service XSCADProto {
+    rpc XSCADMethod (XSCADRequest) returns (XSCADResponse);
+}
+
+message XSCADRequest {
+    string name = 1;
+}
+
+message XSCADResponse {
+    string message = 1;
+}
